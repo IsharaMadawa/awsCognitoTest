@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
+import { HomeComponent } from './home/home.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: "", component: AuthComponent },
+  { path: "forgotPass", component: ForgotPasswordComponent },
+  { path: "home", component: HomeComponent },
+  { path: "**", redirectTo: '' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
