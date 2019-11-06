@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AmplifyService } from 'aws-amplify-angular';
 import { ChartDataSets, ChartType, ChartOptions, RadialChartOptions } from 'chart.js';
-import { Color, Label, ThemeService, SingleDataSet, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip, MultiDataSet } from 'ng2-charts';
+import { Color, Label, SingleDataSet, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip, MultiDataSet } from 'ng2-charts';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +9,12 @@ import { Color, Label, ThemeService, SingleDataSet, monkeyPatchChartJsLegend, mo
 })
 export class HomeComponent implements OnInit {
 
-  authUser: any;
-  constructor(public amplify: AmplifyService, private themeService: ThemeService) {
+  constructor() {
     monkeyPatchChartJsTooltip();
     monkeyPatchChartJsLegend();
   }
 
-  ngOnInit() {
-    this.amplify.auth().currentAuthenticatedUser().then(user => {
-      this.authUser = user;
-    })
-      .catch(err => console.log(err));
-  }
+  ngOnInit() { }
 
   //Line
   public lineChartData: ChartDataSets[] = [

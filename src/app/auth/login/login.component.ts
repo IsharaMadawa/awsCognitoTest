@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Auth } from 'aws-amplify';
-import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class AuthComponent implements OnInit {
+export class LoginComponent implements OnInit {
   authUser: any;
-  constructor(private route: Router) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -27,9 +26,6 @@ export class AuthComponent implements OnInit {
       password: this.signInForm.get("password").value,
     }
 
-    Auth.signIn(userLogin).then(user => {
-      this.authUser = user;
-      this.route.navigate(['/home'])
-    }).catch(err => console.log(err));
+    this.authService.login(userLogin);
   }
 }

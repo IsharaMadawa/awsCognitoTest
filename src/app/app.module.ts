@@ -4,18 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
-import { HomeComponent } from './home/home.component';
-import { AuthComponent } from './auth/auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { ChartsModule } from 'ng2-charts';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './auth/login/login.component';
+
+// Tutorial - https://github.com/theo4u/AuthGuard/blob/master/src/app/services/auth.service.ts
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AuthComponent,
-    ForgotPasswordComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +22,8 @@ import { ChartsModule } from 'ng2-charts';
     AmplifyAngularModule,
     FormsModule,
     ReactiveFormsModule,
-    ChartsModule
+    DashboardModule,
+    SharedModule
   ],
   providers: [AmplifyService],
   bootstrap: [AppComponent]
