@@ -42,4 +42,14 @@ export class AuthService {
         })
             .catch(err => console.log(err));
     }
+
+    forgotPassword(userForm: any): any {
+        return Auth.forgotPassword(userForm.username).catch(err => console.log(err));
+    }
+
+    resetPassword(userForm: any): any {
+        Auth.forgotPasswordSubmit(userForm.username, userForm.code, userForm.newPassword)
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+    }
 }
