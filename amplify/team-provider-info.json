@@ -9,11 +9,6 @@
             "UnauthRoleName": "amplify-amplify-app-dev-103309-unauthRole",
             "StackName": "amplify-amplify-app-dev-103309",
             "StackId": "arn:aws:cloudformation:us-east-1:310090077583:stack/amplify-amplify-app-dev-103309/9071cb90-ff89-11e9-a479-0a437bda7b86"
-        },
-        "categories": {
-            "auth": {
-                "amplifyapp4c042d65": {}
-            }
         }
     }
 }

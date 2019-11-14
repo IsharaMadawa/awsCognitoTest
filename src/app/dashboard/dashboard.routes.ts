@@ -8,7 +8,7 @@ export const dashboardRoutes: Routes = [
   {
     path: 'dashboard',
     component: LayoutComponent,
-    canActivate: [AuthGuardService],
+    //canActivate: [AuthGuardService],
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
