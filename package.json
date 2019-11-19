@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-lib": "ng build up-ui-common && npm run npm_pack",
+    "npm_pack": "cd dist/button && npm pack",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -29,10 +31,12 @@
     "ngx-bootstrap": "^5.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "up-ui-common": "file:dist/button/button-0.0.1.tgz"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.14",
+    "@angular-devkit/build-ng-packagr": "^0.803.19",
     "@angular/cli": "~8.3.14",
     "@angular/compiler-cli": "~8.2.11",
     "@angular/language-service": "~8.2.11",
@@ -41,6 +45,8 @@
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "ng-packagr": "^5.7.1",
+    "tsickle": "^0.37.1",
     "babel-loader": "^8.0.6",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",

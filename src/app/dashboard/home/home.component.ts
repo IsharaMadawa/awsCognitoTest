@@ -16,6 +16,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() { }
 
+  //Shared Component - Test
+  btnText = 'Submit';
+  disabledBtn = false;
+
+
   //Line
   public lineChartData: ChartDataSets[] = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },

@@ -124,6 +124,21 @@
           }
         }
       }
-    }},
+    },
+    "up-ui-common": {
+      "root":"custom-lib",
+      "sourceRoot": "custom_lib/projects/button/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "project": "custom_lib/projects/button/ng-package.json",
+            "tsConfig": "custom_lib/tsconfig.json"
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "awscognito"
 }

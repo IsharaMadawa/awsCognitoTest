@@ -1,5 +1,8 @@
 <div class="container">
     <div class="row">
+        <lib-button [text]="btnText" [disabled]="disabledBtn"></lib-button>
+    </div>
+    <div class="row">
         <div class="col-xs" style="display: block;">
             <canvas baseChart width="300" height="300" [datasets]="lineChartData" [labels]="lineChartLabels"
                 [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"

@@ -8,9 +8,12 @@ import { dashboardRoutes } from './dashboard.routes';
 import { ChartsModule } from 'ng2-charts';
 import { AuthGuardService } from '../guards/auth-guard.service';
 
+import { ButtonModule } from "up-ui-common";
+
 @NgModule({
   declarations: [HomeComponent, D3ChartsComponent, LayoutComponent],
   imports: [
+    ButtonModule,
     CommonModule,
     ChartsModule,
     RouterModule.forChild(dashboardRoutes)
